@@ -196,7 +196,7 @@ def save_config():
 
 
 def update():
-    file = requests.get('https://raw.githubusercontent.com/Da-Dog/MCDR-AdvancedWhitelist/master/AdvancedWhitelist.py')
+    file = requests.get('https://raw.githubusercontent.com/Da-Dog/MCDR-Plugins/master/MCDR-AdvancedWhitelist/AdvancedWhitelist.py')
     if file.status_code == 200:
         with open('./plugins/AdvancedWhitelist.py', "wb") as update:
             update.write(file.content)

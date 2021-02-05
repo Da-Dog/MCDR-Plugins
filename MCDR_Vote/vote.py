@@ -12,7 +12,7 @@ help_msg = '''------ §aMCDR 投票插件帮助信息 §f------
 §b!!vote disagree (项目ID) §f- §c反对
 --------------------------------'''
 
-json_filename = "./plugins/vote/vote_event.json"
+json_filename = "./config/vote_event.json"
 
 event_list = {
     
@@ -158,7 +158,7 @@ def on_load(server, old):
     global event_list
     server.add_help_message('!!vote', '投票系统帮助')
     try:
-        with open(json_filename) as f:
+        with open(json_filename, 'r') as f:
             event_list = json.load(f, encoding='utf8')
     except:
         saveJson()

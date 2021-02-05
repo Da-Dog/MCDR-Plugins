@@ -37,7 +37,11 @@ def refresh_list():
     y=[]
     z=[]
     dimension=[]
-    file=open(path,'r',encoding='gbk')
+    try:
+        file=open(path,'r',encoding='gbk')
+    except FileNotFoundError:
+        create_csv(path)
+        file=open(path,'r',encoding='gbk')
     database=csv.reader(file)
     for i in database:
         name.append(i[0])

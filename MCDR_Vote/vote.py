@@ -158,7 +158,7 @@ def on_load(server, old):
     global event_list
     server.add_help_message('!!vote', '投票系统帮助')
     try:
-        with open(json_filename) as f:
+        with open(json_filename, 'r') as f:
             event_list = json.load(f, encoding='utf8')
     except:
         saveJson()

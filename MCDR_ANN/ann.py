@@ -57,7 +57,7 @@ on_player_join = True
 
 def on_load(server, old):
     global ann_list
-    server.add_help_message('!!ann', '定时公告帮助')
+    server.register_help_message('!!ann', '定时公告帮助')
     try:
         with open(json_filename) as f:
             ann_list = json.load(f, encoding='utf8')
@@ -148,10 +148,6 @@ def on_info(server, info):
 
 def on_unload(server):
     saveJson()
-
-
-def on_load(server, old):
-    server.add_help_message('!!ann', '定时公告插件帮助')
     
 
 def saveJson():

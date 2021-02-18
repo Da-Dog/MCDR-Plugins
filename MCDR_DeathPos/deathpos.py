@@ -39,4 +39,4 @@ def on_info(server, info):
 
 
 def on_load(server, old):
-    server.add_help_message('!!dp', '查看上一玩家死亡地点')
+    server.register_help_message('!!dp', '查看上一玩家死亡地点')

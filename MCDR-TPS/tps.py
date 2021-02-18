@@ -33,4 +33,4 @@ def on_info(server, info):
         server.say("------ §a当前服务器TPS为 §e" + str(split) + " §f------")
 
 def on_load(server, info):
-    server.add_help_message('!!tps help', 'TPS检测帮助')
+    server.register_help_message('!!tps help', 'TPS检测帮助')

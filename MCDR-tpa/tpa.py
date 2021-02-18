@@ -96,6 +96,6 @@ def on_player_left(server, player):
         del request_list[tell_player]
 
 def on_load(server, old_module):
-    server.add_help_message('!!tpa', '传送插件帮助信息')
+    server.register_help_message('!!tpa', '传送插件帮助信息')
     if old_module is not None:
         player_list = old_module.player_list

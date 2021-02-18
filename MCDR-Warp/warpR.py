@@ -232,7 +232,7 @@ def warp_add(args, server, info):
 
 def on_load(server, old):
     global warp_list
-    server.add_help_message('!!warp', '坐标点插件帮助')
+    server.register_help_message('!!warp', '坐标点插件帮助')
     try:
         with open(json_filename) as f:
             warp_list = json.load(f, encoding='utf8')

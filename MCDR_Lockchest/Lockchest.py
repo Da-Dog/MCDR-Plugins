@@ -139,7 +139,7 @@ def on_info(server, info):
 
 def on_load(server, old):
     global keys
-    server.add_help_message('!!lc', '箱子锁系统帮助')
+    server.register_help_message('!!lc', '箱子锁系统帮助')
     try:
         with open(json_filename) as f:
             keys = json.load(f, encoding='utf8')

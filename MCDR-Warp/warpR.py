@@ -245,5 +245,5 @@ def on_unload(server):
 
 #保存字典至JSON
 def saveJson():
-    with open(json_filename, 'w') as f:
+    with open(json_filename, 'a+') as f:
         json.dump(warp_list, f, indent=4)

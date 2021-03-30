@@ -80,7 +80,7 @@ def tp_request(server, info, args):
     else:
         server.tell(info.player, "§7[§3TPA§f/§cWARN§7] §c玩家不在线")
 
-def on_player_joined(server, player):
+def on_player_joined(server, player, Info):
     player_list.append(player)
 
 def on_player_left(server, player):

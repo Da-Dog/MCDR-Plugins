@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 # v0.1.0
-from utils.rtext import *
+from mcdreforged.api.rtext import *
 from time import sleep
 
 request_list = {}

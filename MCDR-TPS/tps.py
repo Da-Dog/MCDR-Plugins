@@ -25,7 +25,7 @@ def on_info(server, info):
                 server.execute('debug start')
                 sleep(time)
                 server.execute('debug stop')
-    elif 'Stopped debug profiling after' in info.content:
+    elif 'Stopped debug profiling after' in info.content or 'Stopped tick profiling after' in info.content:
         match = re.compile(r'[(](.*?)[)]', re.S)
         split = re.findall(match, info.content)[0].split(" ")[0]
         if float(split) >= 20.00:

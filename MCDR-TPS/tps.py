@@ -21,7 +21,10 @@ def on_info(server, info):
                 for line in help_msg.splitlines():
                     server.tell(info.player, line)
             elif len(args) == 2:
-                time = int(args[1])
+                try:
+                    time = int(args[1])
+                except:
+                    server.tell(info.player, "------ §c请输入整数 §f------")
                 server.execute('debug start')
                 sleep(time)
                 server.execute('debug stop')

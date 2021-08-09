@@ -25,6 +25,7 @@ def on_info(server, info):
                     time = int(args[1])
                 except:
                     server.tell(info.player, "------ §c请输入整数 §f------")
+                    return
                 server.execute('debug start')
                 sleep(time)
                 server.execute('debug stop')
